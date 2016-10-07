@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+        <style>
+
+            * {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Raleway', sans-serif;
+                background: lightcyan;
+            }
+
+            header {
+                max-width:400px;
+                margin: 0 auto;
+            }
+
+            header h2 {
+                font-weight: 300;
+                text-align: center;
+            }
+
+            #d20 {
+                transform: translateZ(0) translate(-50%, -50%);
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                margin: 0 auto;
+            }
+
+            #dice-value {
+                position: absolute;
+                left: 38%;
+                top: 38%;
+                width: 80px;
+
+                font-size: 3em;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h2>
+                Something great coming soon...
+            </h2>
+        </header>
+
+        <div id="d20">
+            <img class="svg" src="./static/d20.svg"/>
+            <div id="dice-value"></div>
+        </div>
+        <script>
+            var rate = 100;
+            var dice = document.getElementById('d20');
+            var diceValue = document.getElementById('dice-value');
+            diceValue.innerHTML = Math.ceil(Math.random() * 20)
+
+            // var interval = setInterval(function() {
+            //     var rotation = Math.random();
+            //     window.requestAnimationFrame(function() {
+            //         dice.style.transform = 'translateZ(0) rotate(' + rotation + 'turn)';
+            //         diceValue.innerHTML = Math.ceil(Math.random() * 20)
+            //     });
+            // }, rate)
+        </script>
+    </body>
+</html>

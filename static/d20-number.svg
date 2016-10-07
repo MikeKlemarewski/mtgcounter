@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="272.32516"
+   height="313.38947"
+   id="svg3971"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="d20-number.svg">
+  <title
+     id="title4003">Twenty-Sided Dice</title>
+  <defs
+     id="defs3973" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="234.30247"
+     inkscape:cy="204.83409"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-grids="true"
+     inkscape:snap-nodes="true"
+     inkscape:snap-others="true"
+     inkscape:object-paths="false"
+     inkscape:snap-global="false" />
+  <metadata
+     id="metadata3976">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:title>Twenty-Sided Dice</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Brian Burger/Wirelizard Design</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:description>Twenty-sided dice (d20) as used in RPGs and wargaming.</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-246.69456,-375.66745)">
+    <path
+       style="fill:#d00000;fill-opacity:1;stroke:none"
+       d="m 262.76447,469.70179 c 176.24219,-71.66866 88.12109,-35.83433 0,0 z m 148.60477,77.09854 -7.7099,0 0,-5.75525 -14.0624,0 0,-7.00413 12.70496,-18.89455 9.06734,0 0,19.98046 4.50639,0 0,5.91822 -4.50639,0 z m -26.71307,0 -22.09807,0 0,-5.64667 7.16692,0 0,-20.46921 -7.38397,1.52027 0,-5.53807 7.38397,-1.52025 7.7643,0 0,26.00726 7.16685,0 z m 19.00317,-11.67347 0,-13.30213 -8.95867,13.30213 z"
+       id="path3922"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.93452847px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 385.79195,438.21272 -77.31957,136.97962 157.17871,0.47202 z"
+       id="path3353"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.93452847px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 308.47449,575.19236 -43.89887,20.29633 -4.0309,-140.19171 z"
+       id="path3355"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 385.16346,382.68986 513.4929,456.14377 385.87775,438.09165 260.34204,455.70326 Z"
+       id="path3391"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 385.70639,438.21277 -0.59964,-55.49098"
+       id="path3395"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.93452847px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 465.34782,575.62165 43.89887,20.29632 4.0309,-140.12858 z"
+       id="path3355-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 308.73489,575.23451 78.14279,93.4755 -122.07136,-72.93979"
+       id="path3414"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 465.52393,575.65551 386.37098,668.71274 509.4525,596.19122"
+       id="path3414-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+  </g>
+</svg>
