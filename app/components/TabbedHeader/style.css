@@ -1,0 +1,22 @@
+.tabbed-header {
+    background: azure;
+}
+.tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-left: 25%;
+}
+
+.tab {
+    flex-grow: 1;
+    text-align: center;
+    
+    opacity: 0.5;
+}
+
+.active {
+    font-weight: bold;
+    opacity: 1;
+}

@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import Button from './components/button'
+import TabbedHeader from './components/TabbedHeader'
 
 class Home extends React.Component {
 
@@ -7,7 +7,7 @@ class Home extends React.Component {
         return (
             <div>
                 Home page
-                <Button text="Suck a butt!"/>
+                <TabbedHeader items={["Chris", "Mike", "Jane"]} />
             </div>
         )
     }

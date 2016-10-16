@@ -29,6 +29,6 @@
   "scripts": {
     "dev": "webpack-dev-server --https --progress --colors --hot --inline --display-error-details",
     "build": "webpack --progress --colors --display-error-details --optimize-dedupe --optimize-minimize",
-    "styleguide-server": "styleguidist server"
+    "styleguide": "styleguidist server"
   }
 }
