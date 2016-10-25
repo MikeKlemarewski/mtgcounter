@@ -1,5 +1,6 @@
 .tabbed-header {
     background: azure;
+    overflow: hidden;
 }
 .tabs {
     display: flex;
