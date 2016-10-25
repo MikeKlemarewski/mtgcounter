@@ -2,6 +2,7 @@
     background: azure;
     overflow: hidden;
 }
+
 .tabs {
     display: flex;
     flex-direction: row;

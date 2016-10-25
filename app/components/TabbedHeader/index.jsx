@@ -15,7 +15,8 @@ class TabbedHeader extends React.Component {
         this.maxDrag = -(100 - (100 / this.props.items.length))
 
         this.state = {
-            offset: 0
+            offset: 0,
+            dragging: false
         }
 
         this.startDrag = this.startDrag.bind(this)
@@ -30,6 +31,9 @@ class TabbedHeader extends React.Component {
     }
 
     startDrag(event) {
+        this.setState({
+            dragging: true,
+        })
         this.touchX = event.changedTouches[0].clientX
     }
 
@@ -43,19 +47,38 @@ class TabbedHeader extends React.Component {
         this.touchX = event.changedTouches[0].clientX
     }
 
+    endDrag() {
+        this.setState({
+            dragging: false,
+        })
+
+        let targetOffset = this.state.offset + this.momentum
+        let tabWidth = 100 / this.props.items.length
+        let clampedOffset = Math.round(targetOffset / tabWidth) * tabWidth
+        this.setState({
+            offset: clampedOffset
+        })
+    }
+
     render() {
         let {items, activeIndex} = this.props
         let {offset} = this.state
         let itemClasses = ''
 
+        let containerStyles = {
+            width: `${this.width}%`,
+            transform: `translateX(${offset}%)`
+        }
+
+        if (!this.state.dragging) {
+            containerStyles.transition = `transform 1s`
+        }
+
         return (
             <div className={styles['tabbed-header']}>
                 <div
                     className={styles.tabs}
-                    style={{
-                        width: `${this.width}%`,
-                        transform: `translateX(${offset}%)`
-                    }}
+                    style={containerStyles}
                     onTouchStart={this.startDrag}
                     onTouchEnd={this.endDrag}
                     onTouchMove={this.doDrag}>
