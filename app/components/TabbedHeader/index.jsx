@@ -3,16 +3,19 @@ import classNames from 'classnames/bind'
 import styles from './style.css'
 
 let boundClassNames = classNames.bind(styles);
+const wrapperClass = styles['tabbed-header']
 
 class TabbedHeader extends React.Component {
+
 
     constructor(props) {
         super(props)
         this.touchX = 0
         this.dragEnd = 0
         this.momentum = 0
-        this.width = 50 * this.props.items.length
-        this.maxDrag = -(100 - (100 / this.props.items.length))
+        this.widthPixels = 0
+        this.maxDrag = 0
+        this.widthPercent = 50 * this.props.items.length
 
         this.state = {
             offset: 0,
@@ -31,6 +34,11 @@ class TabbedHeader extends React.Component {
     }
 
     startDrag(event) {
+        let el = event.target
+        while ((el = el.parentElement) && !el.classList.contains(styles.tabs));
+        this.widthPixels = el.clientWidth
+        this.maxDrag = -(el.clientWidth - (el.clientWidth / this.props.items.length))
+
         this.setState({
             dragging: true,
         })
@@ -38,8 +46,7 @@ class TabbedHeader extends React.Component {
     }
 
     doDrag(event) {
-        // Dividing by 10 makes the dragging feel decent
-        let newOffset = this.state.offset + (event.changedTouches[0].clientX - this.touchX) / 10
+        let newOffset = this.state.offset + (event.changedTouches[0].clientX - this.touchX)
         this.setState({
             offset: Math.max(this.maxDrag, Math.min(newOffset, 0)),
         })
@@ -53,10 +60,10 @@ class TabbedHeader extends React.Component {
         })
 
         let targetOffset = this.state.offset + this.momentum
-        let tabWidth = 100 / this.props.items.length
+        let tabWidth = this.widthPixels / this.props.items.length
         let clampedOffset = Math.round(targetOffset / tabWidth) * tabWidth
         this.setState({
-            offset: clampedOffset
+            offset: Math.max(Math.min(0, clampedOffset), this.maxDrag)
         })
     }
 
@@ -66,16 +73,20 @@ class TabbedHeader extends React.Component {
         let itemClasses = ''
 
         let containerStyles = {
-            width: `${this.width}%`,
-            transform: `translateX(${offset}%)`
+            width: `${this.widthPercent}%`,
+            transform: `translateX(${offset}px)`
         }
 
         if (!this.state.dragging) {
-            containerStyles.transition = `transform 1s`
+            containerStyles = {
+                ...containerStyles,
+                transition: `transform 0.25s`,
+                'transitionTimingFunction': 'ease-out'
+            }
         }
 
         return (
-            <div className={styles['tabbed-header']}>
+            <div className={wrapperClass}>
                 <div
                     className={styles.tabs}
                     style={containerStyles}
