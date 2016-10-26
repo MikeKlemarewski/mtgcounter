@@ -3,7 +3,6 @@ import classNames from 'classnames/bind'
 import styles from './style.css'
 
 let boundClassNames = classNames.bind(styles);
-const wrapperClass = styles['tabbed-header']
 
 class TabbedHeader extends React.Component {
 
@@ -13,8 +12,8 @@ class TabbedHeader extends React.Component {
         this.touchX = 0
         this.dragEnd = 0
         this.momentum = 0
-        this.widthPixels = 0
         this.maxDrag = 0
+        this.widthPixels = 0
         this.widthPercent = 50 * this.props.items.length
 
         this.state = {
@@ -86,7 +85,7 @@ class TabbedHeader extends React.Component {
         }
 
         return (
-            <div className={wrapperClass}>
+            <div className={styles.tabbedHeader}>
                 <div
                     className={styles.tabs}
                     style={containerStyles}
@@ -95,11 +94,11 @@ class TabbedHeader extends React.Component {
                     onTouchMove={this.doDrag}>
 
                     {items.map((item, index) => {
-                    itemClasses = boundClassNames({
-                        tab: true,
-                        active: index === activeIndex
-                    });
-                            return <div className={itemClasses}>{item}</div>
+                        itemClasses = boundClassNames({
+                            tab: true,
+                            active: index === activeIndex
+                        });
+                        return <div className={itemClasses}>{item}</div>
                     })}
                 </div>
             </div>
