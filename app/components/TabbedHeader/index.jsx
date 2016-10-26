@@ -60,16 +60,20 @@ class TabbedHeader extends React.Component {
 
         let targetOffset = this.state.offset + this.momentum
         let tabWidth = this.widthPixels / this.props.items.length
-        let clampedOffset = Math.round(targetOffset / tabWidth) * tabWidth
+        let nextActiveIndex = Math.round(targetOffset / tabWidth)
+        let clampedOffset = nextActiveIndex * tabWidth
+
+
         this.setState({
             offset: Math.max(Math.min(0, clampedOffset), this.maxDrag)
         })
+        this.props.onUpdateActiveIndex(Math.abs(nextActiveIndex))
     }
 
     render() {
         let {items, activeIndex} = this.props
         let {offset} = this.state
-        let itemClasses = ''
+        let textClass = ''
 
         let containerStyles = {
             width: `${this.widthPercent}%`,
@@ -94,11 +98,17 @@ class TabbedHeader extends React.Component {
                     onTouchMove={this.doDrag}>
 
                     {items.map((item, index) => {
-                        itemClasses = boundClassNames({
-                            tab: true,
+                        textClass = boundClassNames({
+                            tabText: true, 
                             active: index === activeIndex
                         });
-                        return <div className={itemClasses}>{item}</div>
+                        return (
+                            <div className={styles.tab}>
+                                <div className={textClass}>
+                                    {item}
+                                </div>
+                            </div>
+                        )
                     })}
                 </div>
             </div>
@@ -107,11 +117,13 @@ class TabbedHeader extends React.Component {
 }
 
 TabbedHeader.propTypes = {
-    text: PropTypes.string
+    items: PropTypes.array.isRequired,
+    onUpdateActiveIndex: PropTypes.func.isRequired
 }
 
 TabbedHeader.defaultProps = {
-    activeIndex: 0
+    activeIndex: 0,
+    items: []
 }
 
 export default TabbedHeader

@@ -15,10 +15,15 @@
     flex-grow: 1;
     text-align: center;
     
+}
+
+.tabText {
+    display: inline-block;
     opacity: 0.5;
 }
 
 .active {
     font-weight: bold;
     opacity: 1;
+    border-bottom: 1px solid black;
 }
