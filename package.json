@@ -19,10 +19,11 @@
     "babel-preset-react-hmre": "1.1.1",
     "classnames": "2.2.3",
     "connect": "2.3.4",
-    "css-loader": "^0.25.0",
+    "css-loader": "0.25.0",
     "react-router-redux": "3.0.0",
     "react-styleguidist": "4.0.1",
-    "style-loader": "^0.13.1",
+    "react-svg-loader": "1.1.1",
+    "style-loader": "0.13.1",
     "webpack": "1.12.12",
     "webpack-dev-server": "1.14.1"
   },

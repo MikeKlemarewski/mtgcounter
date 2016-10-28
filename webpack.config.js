@@ -24,9 +24,9 @@ module.exports = {
             },
             cacheDirectory: __dirname + '/tmp'
         },{
-	    test: /.css$/,
-	    loader: 'style!css-loader?modules&importLoader=1&localIdentName=[name]___local___[hash:base64:5]'
-	}]
+            test: /.css$/,
+            loader: 'style!css-loader?modules&importLoader=1&localIdentName=[name]___local___[hash:base64:5]'
+        }]
     },
     devServer: {
          headers: { "Access-Control-Allow-Origin": "*" },

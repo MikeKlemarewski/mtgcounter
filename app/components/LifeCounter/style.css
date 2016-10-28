@@ -1,0 +1,16 @@
+.lifeCounter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100px;
+    min-width: 100px;
+    font-size: 26vw;
+
+    user-select: none;
+}
+
+.arrows {
+    height: 18vw;
+    margin-left: 10px;
+}
