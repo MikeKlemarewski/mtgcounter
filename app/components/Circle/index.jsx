@@ -22,6 +22,10 @@ class Circle extends React.Component {
         this.updateCanvas()
     }
 
+    componentWillUpdate() {
+        this.updateCanvas()
+    }
+
     updateCanvas() {
         let context = this.refs.canvas.getContext('2d')
         let canvas = context.canvas
