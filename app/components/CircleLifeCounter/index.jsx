@@ -5,15 +5,41 @@ import Circle from '../Circle'
 
 import styles from './style.css'
 
-const CircleLifeCounter = ({lifeTotal, onLifeChange}) => {
-    return (
-        <div className={styles.container}>
-            <div className={styles.lifeCounter}>
-                <LifeCounter className={styles.lifeCounter} lifeTotal={lifeTotal} onLifeChange={onLifeChange} />
+class CircleLifeCounter extends React.Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            width: 0
+        }
+    }
+
+    componentDidMount() {
+        this.setState({
+            width: this.refs.container.clientWidth
+        })
+    }
+
+    render() {
+        let {lifeTotal, onLifeChange} = this.props
+
+
+        return (
+            <div ref="container" className={styles.container}>
+                <div className={styles.lifeCounter}>
+                    <LifeCounter className={styles.lifeCounter} lifeTotal={lifeTotal} onLifeChange={onLifeChange} />
+                </div>
+                {this.state.width ?
+                    <Circle
+                        className={styles.circle}
+                        total={20}
+                        filled={lifeTotal}
+                        width={this.state.width}
+                        height={this.state.width} />
+                : null}
             </div>
-            <Circle className={styles.circle} total={20} filled={lifeTotal} width={300} height={300} />
-        </div>
-    )
+        )
+    }
 }
 
 export default CircleLifeCounter
