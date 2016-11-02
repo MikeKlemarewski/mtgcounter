@@ -1,5 +1,22 @@
 .wrapper {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 20%;
+}
+
+.label {
+    font-size: 10vw;
+}
+
+.sublabel {
+    font-size: 4vw;
 }
