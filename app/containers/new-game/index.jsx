@@ -1,7 +1,7 @@
 import {connect} from 'react-redux'
 
 import Stepper from '../../components/stepper'
-
+import * as actions from './actions'
 import styles from './style.css'
 
 class NewGame extends React.Component {
@@ -20,7 +20,7 @@ class NewGame extends React.Component {
                 </div>
                 <div className={styles.row}>
                     <div className={styles.sublabel}>Commander Dammage</div>
-                    <input type="checkbox"/>
+                    <input onChange={this.props.toggleCommander} type="checkbox"/>
                 </div>
             </div>
         )
@@ -32,6 +32,12 @@ const mapStateToProps = (state) => {
     }
 }
 
-const ConnectedGame = connect(mapStateToProps)(NewGame)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        toggleCommander: dispatch.bind(null, actions.TOGGLE_COMMANDER)
+    }
+}
+
+const ConnectedGame = connect(mapStateToProps, mapDispatchToProps)(NewGame)
 
 export default ConnectedGame

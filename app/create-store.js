@@ -1,9 +1,11 @@
 import {createStore, combineReducers, compose} from 'redux'
 
-import * as reducers from './reducers'
+import newGame from './containers/new-game/reducer'
 
 export default function(data) {
-    const reducer = combineReducers(reducers)
+    const reducer = combineReducers({
+        newGame
+    })
     const finalCreateStore = compose(
         window.devToolsExtension ? window.devToolsExtension() : f => f
     )(createStore)
