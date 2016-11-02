@@ -8,9 +8,6 @@ class Application extends React.Component {
     render() {
         return (
             <div>
-                <header>
-                    Header
-                </header>
                 <div className="main-content" role="main">
                         {this.props.children}
                 </div>

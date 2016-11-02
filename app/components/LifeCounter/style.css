@@ -1,20 +1,20 @@
-.lifeCounter {
+.container {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-    height: 100%;
-    width: 100%;
-    min-height: 100px;
-    min-width: 100px;
-    font-size: 17.5vw;
-
-    border-radius: 50%;
-
-    user-select: none;
+    width: 70%;
+    position: relative;
 }
 
-.arrows {
-    height: 12vw;
-    margin-left: 10px;
+.lifeCounter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.circle {
+
 }
