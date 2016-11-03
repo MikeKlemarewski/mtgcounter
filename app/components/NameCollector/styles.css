@@ -1,3 +1,6 @@
+@value variables: "../../styles/variables.css";
+@value disabled from variables;
+
 .input {
     border: none;
     border-bottom: 1px solid black;
@@ -11,7 +14,7 @@
 
 .input:disabled {
     background: none;
-    border-bottom: 1px solid rgba(50, 50, 50, 0.5);
+    border-bottom: 1px solid disabled;
 }
 
 .input::-webkit-input-placeholder {
@@ -27,4 +30,9 @@
     background: none;
 
     font-size: 2vw;
+}
+
+.button:disabled {
+    border: 1px solid disabled;
+    color: disabled;
 }

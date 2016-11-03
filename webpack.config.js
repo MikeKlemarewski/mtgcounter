@@ -1,4 +1,6 @@
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var postCSSValues = require('postcss-modules-values')
 
 module.exports = {
     entry: './app/index.jsx',
@@ -25,9 +27,12 @@ module.exports = {
             cacheDirectory: __dirname + '/tmp'
         },{
             test: /.css$/,
-            loader: 'style!css-loader?modules&importLoader=1&localIdentName=[name]___local___[hash:base64:5]'
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoader=1&localIdentName=[name]___local___[hash:base64:5]!postcss-loader')
         }]
     },
+    postcss: [
+        postCSSValues
+    ],
     devServer: {
          headers: { "Access-Control-Allow-Origin": "*" },
          contentBase: '.',
