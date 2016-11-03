@@ -1,7 +1,7 @@
 import {connect} from 'react-redux'
 
 import Stepper from '../../components/stepper'
-import * as actions from './actions'
+import * as actions from '../../actions'
 import styles from './style.css'
 
 class NewGame extends React.Component {
@@ -15,7 +15,7 @@ class NewGame extends React.Component {
                 <div className={styles.row}>
                     <div className={styles.label}>Players:</div>
                     <div>
-                        <Stepper number={2} />
+                        <Stepper number={this.props.playerCount} onChange={this.props.updatePlayerCount} />
                     </div>
                 </div>
                 <div className={styles.row}>
@@ -29,12 +29,16 @@ class NewGame extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
+        ...state.game
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        toggleCommander: dispatch.bind(null, actions.TOGGLE_COMMANDER)
+        updatePlayerCount: (delta) => {
+            dispatch(actions.updatePlayerCount(delta))
+        },
+        toggleCommander: dispatch.bind(null, actions.toggleCommander())
     }
 }
 
