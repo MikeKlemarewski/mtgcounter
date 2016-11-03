@@ -1,5 +1,7 @@
 import {PropTypes} from 'react'
 
+import styles from './styles.css'
+
 class NameCollector extends React.Component {
     constructor(props) {
         super(props)
@@ -32,13 +34,17 @@ class NameCollector extends React.Component {
             <div>
                 <form onSubmit={this.stubitName}>
                     <input
+                        className={styles.input}
                         type="text"
                         ref="nameInput"
                         disabled={this.state.count === 0}
                         placeholder={`Player ${this.props.count - this.state.count + 1}`} />
-                    <button
+                    <input
+                        className={styles.button}
+                        type="submit"
+                        value="Add"
                         disabled={this.state.count === 0}
-                        onClick={this.submitName}>Add</button>
+                        onClick={this.submitName} />
                 </form>
             </div>
         )

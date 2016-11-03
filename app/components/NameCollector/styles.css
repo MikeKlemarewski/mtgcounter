@@ -1,0 +1,30 @@
+.input {
+    border: none;
+    border-bottom: 1px solid black;
+
+    font-size: 3vw;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input:disabled {
+    background: none;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.5);
+}
+
+.input::-webkit-input-placeholder {
+    opacity: 0.3;
+}
+
+.button {
+    padding: 10px;
+    margin-left: 10px;
+
+    border-radius: 10px;
+    border: 1px solid black;
+    background: none;
+
+    font-size: 2vw;
+}
