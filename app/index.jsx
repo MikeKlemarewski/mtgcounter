@@ -5,7 +5,7 @@ import {Provider} from 'react-redux'
 import createStore from './create-store'
 
 import Application from './containers/application'
-import NewGame from './containers/new-game'
+import Main from './containers/main'
 import NamePlayers from './containers/name-players'
 
 const store = createStore()
@@ -15,7 +15,7 @@ render(
         <Router history={browserHistory}>
             <Route path="/" component={Application}>
                 <Route path="name-players" component={NamePlayers} />
-                <IndexRoute component={NewGame} />
+                <IndexRoute component={Main} />
             </Route>
         </Router>
     </Provider>,
