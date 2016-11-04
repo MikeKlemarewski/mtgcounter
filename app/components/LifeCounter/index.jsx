@@ -3,7 +3,7 @@ import {PropTypes} from 'react'
 import Stepper from '../Stepper'
 import Circle from '../Circle'
 
-import styles from './style.css'
+import styles from './styles.css'
 
 class LifeCounter extends React.Component {
 

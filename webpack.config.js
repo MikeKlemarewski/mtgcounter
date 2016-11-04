@@ -14,7 +14,8 @@ module.exports = {
     plugins: [
         new webpack.ProvidePlugin({
             'React': 'react'
-        })
+        }),
+        new ExtractTextPlugin('style.css', {allChunks: true})
     ],
     module: {
         loaders: [{
@@ -27,7 +28,7 @@ module.exports = {
             cacheDirectory: __dirname + '/tmp'
         },{
             test: /.css$/,
-            loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoader=1&localIdentName=[name]___local___[hash:base64:5]!postcss-loader')
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoader=1&localIdentName=[name]___[local]___[hash:base64:5]!postcss-loader')
         }]
     },
     postcss: [

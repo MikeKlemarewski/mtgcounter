@@ -2,7 +2,7 @@ import {connect} from 'react-redux'
 
 import Stepper from '../../components/stepper'
 import * as actions from '../../actions'
-import styles from './style.css'
+import styles from './styles.css'
 
 class NewGame extends React.Component {
 

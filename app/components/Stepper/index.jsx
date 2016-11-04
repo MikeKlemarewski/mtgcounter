@@ -1,6 +1,6 @@
 import {PropTypes} from 'react'
 
-import styles from './style.css'
+import styles from './styles.css'
 import Arrows from 'babel!react-svg!../../../icons/arrows.svg'
 
 const DRAG_THRESHOLD = 20 

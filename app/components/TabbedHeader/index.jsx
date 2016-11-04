@@ -1,6 +1,6 @@
 import {PropTypes} from 'react'
 import classNames from 'classnames/bind'
-import styles from './style.css'
+import styles from './styles.css'
 
 let boundClassNames = classNames.bind(styles);
 

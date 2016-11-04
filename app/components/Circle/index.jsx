@@ -1,6 +1,6 @@
 import {PropTypes} from 'react'
 
-import styles from './style.css'
+import styles from './styles.css'
 
 const MAIN_COLOR = '#00AA44'
 const WARN_COLOR = '#EFEF1E'
