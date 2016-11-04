@@ -1,6 +1,8 @@
 import {connect} from 'react-redux'
 
 import Stepper from '../../components/stepper'
+import Button from '../../components/button'
+
 import * as actions from '../../actions'
 import styles from './styles.css'
 
@@ -21,6 +23,9 @@ class NewGame extends React.Component {
                 <div className={styles.row}>
                     <div className={styles.sublabel}>Commander Dammage</div>
                     <input onChange={this.props.toggleCommander} type="checkbox"/>
+                </div>
+                <div className={styles.row}>
+                    <Button text="Start Game" onClick={() => {}} />                    
                 </div>
             </div>
         )

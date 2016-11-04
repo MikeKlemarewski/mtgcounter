@@ -2,7 +2,8 @@ import * as actions from './actions'
 
 const initialState = {
     playerCount: 2,
-    commanderDamage: false
+    commanderDamage: false,
+    players: []
 }
 
 const game = (state = initialState, action) => {
@@ -17,6 +18,15 @@ const game = (state = initialState, action) => {
                 ...state,
                 commanderDamage: !state.commanderDamage
             };
+        case actions.ADD_PLAYER:
+            let name = (action.name === '') ? `Player ${state.players.length + 1}` : action.name
+            return {
+                ...state,
+                players: state.players.concat([{
+                    name,
+                    health: 20
+                }])
+            }
         default:
             return state;
     }

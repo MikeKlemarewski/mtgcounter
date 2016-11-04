@@ -6,6 +6,7 @@ import createStore from './create-store'
 
 import Application from './containers/application'
 import NewGame from './containers/new-game'
+import NamePlayers from './containers/name-players'
 
 const store = createStore()
 
@@ -13,7 +14,8 @@ render(
     <Provider store={store}>
         <Router history={browserHistory}>
             <Route path="/" component={Application}>
-                <IndexRoute component={NewGame}/>
+                <Route path="name-players" component={NamePlayers} />
+                <IndexRoute component={NewGame} />
             </Route>
         </Router>
     </Provider>,
