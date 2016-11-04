@@ -1,4 +1,5 @@
 import {connect} from 'react-redux'
+import {browserHistory} from 'react-router'
 
 import * as actions from '../../actions'
 import NameCollector from '../../components/NameCollector'
@@ -17,7 +18,7 @@ class NamePlayers extends React.Component {
                     <NameCollector
                         count={this.props.playerCount}
                         onSubmit={this.props.addPlayer}
-                        onComplete={() => {alert('complete')}} />
+                        onComplete={browserHistory.push.bind(null, '/')} />
                 </div>
             </div>
         )

@@ -1,4 +1,5 @@
 import {connect} from 'react-redux'
+import {browserHistory} from 'react-router'
 
 import Stepper from '../../components/stepper'
 import Button from '../../components/button'
@@ -25,7 +26,9 @@ class NewGame extends React.Component {
                     <input onChange={this.props.toggleCommander} type="checkbox"/>
                 </div>
                 <div className={styles.row}>
-                    <Button text="Start Game" onClick={() => {}} />                    
+                    <Button
+                        text="Start Game"
+                        onClick={browserHistory.push.bind(null, 'name-players')} />                    
                 </div>
             </div>
         )
