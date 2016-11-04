@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var postCSSValues = require('postcss-modules-values')
+var autoprefixer = require('autoprefixer')
 
 module.exports = {
     entry: './app/index.jsx',
@@ -32,7 +33,8 @@ module.exports = {
         }]
     },
     postcss: [
-        postCSSValues
+        postCSSValues,
+        autoprefixer({ browsers: ['last 2 versions'] })
     ],
     devServer: {
          headers: { "Access-Control-Allow-Origin": "*" },

@@ -1,0 +1,29 @@
+@value variables: "../../styles/variables.css";
+@value sizeMedium from variables;
+
+.checkbox {
+    appearance: none;
+    display: inline-block;
+    position: relative;
+
+    border: 1px solid black;
+    border-radius: 5px;
+
+    width: sizeMedium;
+    height: sizeMedium;
+    margin-left: 10px;
+
+    outline: none;
+}
+
+.checkbox:checked:after {
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    
+    content: '\2714';
+    font-size: sizeMedium;
+
+    outline: none;
+}
+
