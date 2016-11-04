@@ -1,5 +1,7 @@
 import {PropTypes} from 'react'
 
+import Button from '../Button'
+
 import styles from './styles.css'
 
 class NameCollector extends React.Component {
@@ -39,10 +41,8 @@ class NameCollector extends React.Component {
                         ref="nameInput"
                         disabled={this.state.count === 0}
                         placeholder={`Player ${this.props.count - this.state.count + 1}`} />
-                    <input
-                        className={styles.button}
-                        type="submit"
-                        value="Add"
+                    <Button
+                        text="Add"
                         disabled={this.state.count === 0}
                         onClick={this.submitName} />
                 </form>

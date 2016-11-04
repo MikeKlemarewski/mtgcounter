@@ -20,19 +20,3 @@
 .input::-webkit-input-placeholder {
     opacity: 0.3;
 }
-
-.button {
-    padding: 10px;
-    margin-left: 10px;
-
-    border-radius: 10px;
-    border: 1px solid black;
-    background: none;
-
-    font-size: 2vw;
-}
-
-.button:disabled {
-    border: 1px solid disabled;
-    color: disabled;
-}
