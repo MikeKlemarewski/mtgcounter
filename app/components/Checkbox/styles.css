@@ -18,7 +18,7 @@
 
 .checkbox:checked:after {
     position: absolute;
-    top: -10%;
+    top: -25%;
     left: 5%;
     
     content: '\2714';

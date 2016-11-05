@@ -7,11 +7,16 @@ const Checkbox = ({onChange}) => {
         <input
             className={styles.checkbox}
             type="checkbox"
-            onChange={onChange} />
+            onChange={(event) => {
+                onChange(event.target.checked)
+            }} />
     )
 }
 
 Checkbox.propTypes = {
+    /**
+     * A callback which gets called onChange with the checkbox value
+     */
     onChange: PropTypes.func.isRequired
 }
 
